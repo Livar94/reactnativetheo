@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import React from 'react';
-import { View, Text, TextInput, Pressable, Keyboard, Image, Modal } from 'react-native';
+import { View, Text, Pressable, Image, Modal } from 'react-native';
 import MyRowComponent from './MyRowComponent';
 
 export default function Start1({ navigation }) {
@@ -12,8 +12,7 @@ export default function Start1({ navigation }) {
   };
 
 
-  return (
-    
+  return ( 
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text style={{ fontSize: 20 }}>Screen 1</Text>
 
@@ -55,7 +54,7 @@ export default function Start1({ navigation }) {
       
       
       
-      <MyRowComponent />
+      <MyRowComponent itemsList={[{name: 'Item 1', id:1} ,{name: 'Item 2', id:2} , {name: 'Item 3', id:3}]} />
       
     </View>
   );

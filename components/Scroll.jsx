@@ -50,7 +50,6 @@ export default function ScrollableList() {
         <Text>Item 43</Text>
         <Text>Item 44</Text>
         <Text>Item 45</Text>
-        {/* ... more items */}
       </View>
     </ScrollView>
   );
