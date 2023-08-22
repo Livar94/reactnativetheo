@@ -1,9 +1,8 @@
-import React from 'react';
 import { View, Text } from 'react-native';
 
-export default function MyRowComponent({ itemsList }) {
+export default function MyRowComponent({ itemsList, style }) {
   return (
-    <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+    <View style={style}>
       {itemsList?.map ((item) => <Text key={item.id}>{item.name}</Text>)}
 
     </View>

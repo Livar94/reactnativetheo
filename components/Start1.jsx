@@ -1,24 +1,30 @@
-import { useState } from 'react';
-import React from 'react';
-import { View, Text, Pressable, Image, Modal } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Pressable, Modal } from 'react-native';
+import CustomImage from './Image1';
 import MyRowComponent from './MyRowComponent';
 
+
 export default function Start1({ navigation }) {
- 
   const [modalVisible, setModalVisible] = useState(false);
 
   const toggleModal = () => {
     setModalVisible(!modalVisible);
   };
 
-
-  return ( 
+  return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text style={{ fontSize: 20 }}>Screen 1</Text>
-
-      <Image
-        source={require('../assets/images/Theo.jpg')} // Sätt sökvägen till din bild
-        style={{ width: 300, height: 200, marginVertical: 20 }} // Justera storlek och stil efter behov
+      <CustomImage
+        source={require('../assets/images/Theo.jpg')}
+        width={300}
+        height={200}
+        style={{ marginVertical: 20 }}
+      />
+      <CustomImage
+        source={require('../assets/images/Theosbror.jpg')}
+        width={300}
+        height={200}
+        style={{ marginVertical: 20 }}
       />
 
       <Pressable
@@ -50,12 +56,7 @@ export default function Start1({ navigation }) {
           </View>
         </View>
       </Modal>
-
-      
-      
-      
-      <MyRowComponent itemsList={[{name: 'Item 1', id:1} ,{name: 'Item 2', id:2} , {name: 'Item 3', id:3}]} />
-      
+      <MyRowComponent style={{ flexDirection: 'row', justifyContent: 'space-around' }} itemsList={[{name: 'Item 1', id:1} ,{name: 'Item 2', id:2} , {name: 'Item 3', id:3}]} />
     </View>
   );
 }
